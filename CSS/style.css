@@ -75,15 +75,15 @@ body {
     align-items: flex-start;
 }
 
-@media (orientation: portrait) {
-    section {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+@media (orientation: portrait) {
     .toggles {
         margin-top: 15vh;
     }
@@ -91,11 +91,7 @@ body {
 
 @media (orientation: landscape) {
     section {
-        min-height: 100vh;
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
     }
 
     .toggles {
