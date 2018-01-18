@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="src/styles/style.css">
     <title>Progress bar</title>
 </head>
 <body>
@@ -20,21 +20,21 @@
     </div>
     <div class="toggles">
             <label class="form-input">
-                <input class="form-input-percent" name="percent">
+                <input type="number" class="form-input-percent" name="percent">
                 Value
             </label>
-            <label class="form-switch">
-                <input type="checkbox">
+            <label class="form-switch animate-label">
+                <input type="checkbox" class="form-switch-animate">
                 <i></i>
                 Animate
             </label>
-            <label class="form-switch">
-                <input type="checkbox">
+            <label class="form-switch hide-label">
+                <input type="checkbox" class="form-switch-hide">
                 <i></i>
                 Hide
             </label>
     </div>
 </section>
-<script src="JS/script.js"></script>
+<script src="src/script.js"></script>
 </body>
 </html>
