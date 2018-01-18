@@ -1,6 +1,6 @@
-const percent = document.querySelector("#percent");
-const circle = document.querySelector("#svg #bar");
-const cont = document.querySelector("#cont");
+const percent = document.querySelector(".form-input-percent");
+const circle = document.querySelector(".progressbar-svg-bar");
+const cont = document.querySelector(".progressbar-container");
 
 function animate() {
     let val = parseInt(percent.value);

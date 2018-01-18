@@ -19,22 +19,22 @@ body {
     text-align: center;
 }
 
-#svg circle {
+.progressbar-svg circle {
     stroke-dashoffset: 0;
     transition: stroke-dashoffset 1s linear;
     stroke: ghostwhite;
     stroke-width: 1em;
 }
 
-#svg #bar {
+.progressbar-svg-bar {
     stroke: gold;
 }
 
-#svg {
+.progressbar-svg {
     transform: rotate(-90deg);
 }
 
-#cont {
+.progressbar-container {
     display: block;
     height: 200px;
     width: 200px;
@@ -42,7 +42,7 @@ body {
     position: relative;
 }
 
-#cont::after {
+.progressbar-container::after {
     position: absolute;
     display: block;
     height: 160px;
@@ -57,7 +57,7 @@ body {
     font-size: 2em;
 }
 
-#percent {
+.form-input-percent {
     border: 1px solid #666;
     width: 46px;
     height: 26px;
