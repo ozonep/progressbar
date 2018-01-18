@@ -6,8 +6,6 @@ const animateLabel = document.querySelector(".form-switch.animate-label");
 const circle = document.querySelector(".progressbar-svg-bar");
 const cont = document.querySelector(".progressbar-container");
 
-
-
 function animateCircle() {
     let val = parseInt(percent.value);
     if (isNaN(val) || val > 100) {
@@ -24,8 +22,7 @@ function animateCircle() {
 
 percent.addEventListener("input", animateCircle, false);
 
-
-hideLabel.addEventListener("click", function(){
+hideLabel.addEventListener("click", function() {
     if (hide.checked) {
         cont.classList.add("invisible");
     } else {
@@ -33,7 +30,7 @@ hideLabel.addEventListener("click", function(){
     }
 }, false);
 
-animateLabel.addEventListener("click", function(){
+animateLabel.addEventListener("click", function() {
     if (animate.checked) {
         circle.classList.add("animation");
     } else {
