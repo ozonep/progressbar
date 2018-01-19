@@ -31,16 +31,13 @@ body {
 }
 
 .progressbar-svg-bar.animation {
-    animation: fake-load 3s infinite linear;
+    animation: dash 5s linear infinite reverse;
 }
 
-@keyframes fake-load {
-from {
-    stroke-dashoffset:565;
-}
-to   {
-    stroke-dashoffset:0;
-}
+@keyframes dash {
+    to {
+        stroke-dashoffset: 1131;
+    }
 }
 
 .progressbar-svg {

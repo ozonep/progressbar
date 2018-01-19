@@ -13,9 +13,9 @@ function animateCircle() {
     } else if (val < 0) {
         val = 0;
     }
-    let r = circle.getAttribute("r");
-    let c = Math.PI*(r*2);
-    let pct = ((100-val)/100)*c;
+    let r = circle.getAttribute("r"); //getting radius from attribute
+    let c = Math.PI*(r*2);            //calculating the circumference of a circle based on radius
+    let pct = ((100-val)/100)*c;      //calculating percentage display
     circle.style.strokeDashoffset = pct.toString();
     cont.setAttribute("data-pct", val.toString());
 }
