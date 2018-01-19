@@ -2,24 +2,24 @@
     const template = document.querySelector("#form-input");
 
     class Input {
-        constructor({element, label = "", checked = false}) {
+        constructor({element, label = "", value = 0}) {
             const component = template.content.cloneNode(true);
             const parentNode = element.parentNode;
             this.labelText = component.querySelector(".form-switch__label");
-            this.labelChecked = component.querySelector(".form-switch__input");
+            this.labelPercent = component.querySelector(".form-input__percent");
             this.setLabel(label);
-            this.setValue(checked);
+            this.setValue(value);
             parentNode.replaceChild(component, element);
         }
         setLabel(name) {
             this.labelText.innerText = name;
         }
-        setValue(checked) {
-            this.labelChecked.checked = checked;
+        setValue(value) {
+            this.labelPercent.value = value;
         }
         onChange(func) {
-            this.labelChecked.addEventListener("change", () => {
-                func(this.labelChecked.checked);
+            this.labelPercent.addEventListener("change", () => {
+                func(this.labelPercent.value);
             }, false);
         }
     }
