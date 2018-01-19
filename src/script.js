@@ -1,10 +1,3 @@
-// const percent = document.querySelector(".form-input-percent");
-// const hide = document.querySelector(".form-switch-hide");
-// const hideLabel = document.querySelector(".form-switch.hide-label");
-// const animate = document.querySelector(".form-switch-animate");
-// const animateLabel = document.querySelector(".form-switch.animate-label");
-// const circle = document.querySelector(".progressbar-svg-bar");
-// const cont = document.querySelector(".progressbar-container");
 const percentSwitchCont = document.querySelector("#percent-switch");
 const hidingSwitchCont = document.querySelector("#hiding-switch");
 const animatingSwitchCont = document.querySelector("#animating-switch");
@@ -12,14 +5,14 @@ const justTest = document.querySelector(".progress-cont");
 
 const progress = new Progress({
     element: justTest,
-    value: 50,
+    value: 100,
     mode: "animated",
-    modeValue: "yes"
+    modeValue: ""
 });
 
 const percentInput = new Input({
     label: "Value",
-    value: 15,
+    value: 100,
     element: percentSwitchCont,
 });
 
@@ -31,23 +24,18 @@ const animatingSwitch = new Switch({
 
 const hidingSwitch = new Switch({
     label: "Hide",
-    checked: true,
+    checked: false,
     element: hidingSwitchCont,
 });
 
-
-hidingSwitch.onChange(function(checked) {
+hidingSwitch.onChange(checked => {
     progress.setMod("hidden", checked ? "yes" : "no");
 });
 
-animatingSwitch.onChange(function(checked) {
+animatingSwitch.onChange(checked => {
     progress.setMod("animated", checked ? "yes" : "no");
 });
 
-percentInput.onChange(function(value) {
+percentInput.onChange(value => {
     progress.setValue(value);
 });
-
-
-
-

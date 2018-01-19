@@ -1,7 +1,8 @@
 (function (global) {
     const template = document.querySelector("#progressbar");
+
     class Progress {
-        constructor({element, value=0, mode, modeValue }) {
+        constructor({element, value = 0, mode, modeValue}) {
             const component = template.content.cloneNode(true);
             const parentNode = element.parentNode;
             this.progressbarCont = component.querySelector(".progressbar-container");
@@ -12,7 +13,8 @@
             }
             this.setValue(value);
             parentNode.replaceChild(component, element);
-        }
+        };
+
         setMod(mode, value) {
             switch (mode) {
                 case "animated":
@@ -28,26 +30,27 @@
                     }
                     break;
             }
-        }
+        };
+
         setValue(value) {
-                const percentValue = Progress.validatePercent(value);
-                const radius = this.progressbarBar.getAttribute("r");
-                const circumference = Math.PI*(radius*2);
-                const percentage = ((100-percentValue)/100)*circumference;
-                this.progressbarBar.style.strokeDashoffset = percentage.toString();
-                this.progressbarCont.setAttribute("data-pct", percentValue.toString());
-        }
+            const percentValue = this.validatePercent(value);
+            const radius = this.progressbarBar.getAttribute("r");
+            const circumference = Math.PI * (radius * 2);
+            const percentage = ((100 - percentValue) / 100) * circumference;
+            this.progressbarBar.style.strokeDashoffset = percentage.toString();
+            this.progressbarCont.setAttribute("data-pct", percentValue.toString());
+        };
 
-        static validatePercent(value) {
+        validatePercent(value) {
             const percentValue = parseInt(value);
-
             if (isNaN(percentValue) || percentValue > 100) {
-                 return 100;
+                return 100;
             } else if (percentValue < 0) {
                 return 0;
             }
             return percentValue;
-        }
+        };
     }
+
     global.Progress = Progress;
 })(window);

@@ -63,7 +63,7 @@ body {
     width: 160px;
     left: 50%;
     top: 50%;
-    content: attr(data-pct)"%";
+    content: attr(data-pct) "%";
     margin-top: -80px;
     margin-left: -80px;
     border-radius: 100%;
@@ -145,7 +145,7 @@ section {
     height: 22px;
     background-color: black;
     border-radius: 11px;
-    transform: translate3d(2px,2px,0) scale3d(1,1,1);
+    transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
     transition: all 0.25s linear;
 }
 
@@ -157,7 +157,7 @@ section {
     height: 22px;
     background-color: lightgrey;
     border-radius: 11px;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
     transform: translate3d(2px, 2px, 0);
     transition: all 0.2s ease-in-out;
 }
@@ -185,11 +185,9 @@ section {
     transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
 }
 
-
 .form-switch input:checked + .form-switch__slider::after {
     transform: translate3d(22px, 2px, 0);
 }
-
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
