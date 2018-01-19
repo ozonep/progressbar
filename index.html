@@ -19,20 +19,25 @@
         </svg>
     </div>
     <div class="toggles">
-
+        <div id="percent-switch"></div>
+        <div id="hiding-switch"></div>
+        <div id="animating-switch"></div>
     </div>
 </section>
 <template id="form-switch">
-    <label class="form-input">
-        <input type="number" class="form-input__percent">
-        <span class="form-switch__label">Value</span>
-    </label>
     <label class="form-switch">
         <input type="checkbox" class="form-switch__input">
         <span class="form-switch__slider"></span>
         <span class="form-switch__label">Animate</span>
     </label>
 </template>
+<template id="form-input">
+    <label class="form-input">
+        <input type="number" class="form-input__percent">
+        <span class="form-switch__label">Value</span>
+    </label>
+</template>
+<script src="src/components/switch.js"></script>
 <script src="src/script.js"></script>
 </body>
 </html>

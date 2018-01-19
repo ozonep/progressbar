@@ -1,7 +1,7 @@
 (function (global) {
-    const template = document.querySelector("#form-switch");
+    const template = document.querySelector("#form-input");
 
-    class Switch {
+    class Input {
         constructor({element, label = "", checked = false}) {
             const component = template.content.cloneNode(true);
             const parentNode = element.parentNode;
@@ -24,6 +24,6 @@
         }
     }
 
-    global.Switch = Switch;
+    global.Input = Input;
 
 })(window);

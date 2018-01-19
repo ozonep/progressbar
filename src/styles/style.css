@@ -125,7 +125,7 @@ section {
     -webkit-tap-highlight-color: transparent;
 }
 
-.form-switch i {
+.form-switch .form-switch__slider {
     position: relative;
     display: inline-block;
     margin-right: .5rem;
@@ -137,7 +137,7 @@ section {
     transition: all 0.3s linear;
 }
 
-.form-switch i::before {
+.form-switch .form-switch__slider::before {
     content: "";
     position: absolute;
     left: 0;
@@ -149,7 +149,7 @@ section {
     transition: all 0.25s linear;
 }
 
-.form-switch i::after {
+.form-switch .form-switch__slider::after {
     content: "";
     position: absolute;
     left: 0;
@@ -162,12 +162,12 @@ section {
     transition: all 0.2s ease-in-out;
 }
 
-.form-switch:active i::after {
+.form-switch:active .form-switch__slider::after {
     width: 28px;
     transform: translate3d(2px, 2px, 0);
 }
 
-.form-switch:active input:checked + i::after {
+.form-switch:active input:checked + .form-switch__slider::after {
     transform: translate3d(16px, 2px, 0);
 }
 
@@ -177,15 +177,15 @@ section {
     pointer-events: none;
 }
 
-.form-switch input:checked + i {
+.form-switch input:checked + .form-switch__slider {
     background-color: #4BD763;
 }
 
-.form-switch input:checked + i::before {
+.form-switch input:checked + .form-switch__slider::before {
     transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
 }
 
-.form-switch input:checked + i::after {
+.form-switch input:checked + .form-switch__slider::after {
     transform: translate3d(22px, 2px, 0);
 }
 

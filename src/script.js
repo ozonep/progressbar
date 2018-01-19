@@ -20,20 +20,44 @@ function animateCircle() {
     cont.setAttribute("data-pct", val.toString());
 }
 
-percent.addEventListener("input", animateCircle, false);
 
-hideLabel.addEventListener("click", function() {
-    if (hide.checked) {
-        cont.classList.add("invisible");
-    } else {
-        cont.classList.remove("invisible");
-    }
-}, false);
+const percentSwitchCont = document.querySelector("#percent-switch");
+const hidingSwitchCont = document.querySelector("#hiding-switch");
+const animatingSwitchCont = document.querySelector("#animating-switch");
 
-animateLabel.addEventListener("click", function() {
-    if (animate.checked) {
+const animatingSwitch = new Switch({
+    label: "Animate",
+    checked: false,
+    element: animatingSwitchCont,
+});
+animatingSwitch.onChange(function(checked) {
+    if (checked) {
         circle.classList.add("animation");
     } else {
         circle.classList.remove("animation");
     }
-}, false);
+});
+const hidingSwitch = new Switch({
+    label: "Hide",
+    checked: true,
+    element: hidingSwitchCont,
+});
+hidingSwitch.onChange(function(checked) {
+    if (checked) {
+        cont.classList.add("invisible");
+    } else {
+        cont.classList.remove("invisible");
+    }
+});
+
+let progress = new Progress();
+Progress.setMod("animated", "yes");
+
+
+
+
+
+
+
+// percent.addEventListener("input", animateCircle, false);
+
