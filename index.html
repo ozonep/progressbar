@@ -10,13 +10,8 @@
 </head>
 <body>
 <section>
-    <div class="progressbar-container" data-pct="100">
-        <svg class="progressbar-svg" width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48"
-                    stroke-dashoffset="0"></circle>
-            <circle class="progressbar-svg-bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48"
-                    stroke-dashoffset="0"></circle>
-        </svg>
+    <div class="progress-cont">
+
     </div>
     <div class="toggles">
         <div id="percent-switch"></div>
@@ -28,14 +23,24 @@
     <label class="form-switch">
         <input type="checkbox" class="form-switch__input">
         <span class="form-switch__slider"></span>
-        <span class="form-switch__label">Animate</span>
+        <span class="form-switch__label"></span>
     </label>
 </template>
 <template id="form-input">
     <label class="form-input">
         <input type="number" class="form-input__percent">
-        <span class="form-switch__label">Value</span>
+        <span class="form-switch__label"></span>
     </label>
+</template>
+<template id="progressbar">
+    <div class="progressbar-container" data-pct="100">
+        <svg class="progressbar-svg" width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="progressbar-background" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48"
+                    stroke-dashoffset="0"></circle>
+            <circle class="progressbar-svg-bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48"
+                    stroke-dashoffset="0"></circle>
+        </svg>
+    </div>
 </template>
 <script src="src/components/switch.js"></script>
 <script src="src/components/input.js"></script>

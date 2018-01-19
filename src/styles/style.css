@@ -71,7 +71,7 @@ body {
     font-size: 2em;
 }
 
-.form-input-percent {
+.form-input__percent {
     border: 1px solid #666;
     width: 46px;
     height: 26px;
@@ -185,9 +185,11 @@ section {
     transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
 }
 
+
 .form-switch input:checked + .form-switch__slider::after {
     transform: translate3d(22px, 2px, 0);
 }
+
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
