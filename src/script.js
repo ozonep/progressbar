@@ -3,7 +3,6 @@ const hidingSwitchCont = document.querySelector("#hiding-switch");
 const animatingSwitchCont = document.querySelector("#animating-switch");
 const progressCont = document.querySelector(".progress-cont");
 
-
 // Creates progressbar instance with given values
 const progress = new Progress({
     element: progressCont,
@@ -32,7 +31,6 @@ const hidingSwitch = new Switch({
     checked: false,
     element: hidingSwitchCont,
 });
-
 
 //Adding eventlisteners to all inputs so they change progressbar display
 hidingSwitch.onChange(checked => {
