@@ -1,3 +1,5 @@
+// Input component that creates value input from HTML template and puts on page
+
 (function (global) {
     const template = document.querySelector("#form-input");
 

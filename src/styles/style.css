@@ -35,6 +35,9 @@ body {
 }
 
 @keyframes dash {
+    from {
+        stroke-dashoffset: 0;
+    }
     to {
         stroke-dashoffset: 1131;
     }
@@ -69,6 +72,10 @@ body {
     border-radius: 100%;
     line-height: 160px;
     font-size: 2em;
+}
+
+.nopct.progressbar-container::after {
+    content: "";
 }
 
 .form-input__percent {

@@ -1,3 +1,5 @@
+// Progress component that creates circle progressbar from HTML template and puts on page
+
 (function (global) {
     const template = document.querySelector("#progressbar");
 
@@ -19,6 +21,7 @@
             switch (mode) {
                 case "animated":
                     this.progressbarBar.classList.toggle("animation", value === "yes");
+                    this.progressbarCont.classList.toggle("nopct", value === "yes");
                     break;
                 case "hidden":
                     this.progressbarCont.classList.toggle("invisible", value === "yes");
@@ -29,6 +32,8 @@
                         this.progressbarCont.classList.remove("invisible");
                     }
                     break;
+                default:
+                    console.log("Panic on the board!");
             }
         };
 
