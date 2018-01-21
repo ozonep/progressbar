@@ -96,7 +96,7 @@ body {
     align-items: flex-start;
 }
 
-section {
+.progress-section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@ section {
 }
 
 @media (orientation: landscape) {
-    section {
+    .progress-section {
         flex-direction: row;
     }
 
@@ -196,7 +196,7 @@ section {
     transform: translate3d(22px, 2px, 0);
 }
 
-
+/*This removes up/down arrows in number input  */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;

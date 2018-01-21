@@ -1,4 +1,4 @@
-// Switch component that creates switch from HTML template and puts on page
+// Switch component to create switch from HTML template and puts on page
 
 (function (global) {
     const template = document.querySelector("#form-switch");

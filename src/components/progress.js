@@ -1,4 +1,4 @@
-// Progress component that creates circle progressbar from HTML template and puts on page
+// Progress component to create circle progressbar from HTML template and puts on page
 
 (function (global) {
     const template = document.querySelector("#progressbar");
